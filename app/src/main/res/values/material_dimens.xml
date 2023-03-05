@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        # Material Design Dimensions
+        These common dimensions for spacing and typepography that 
+        are provided as per Material Design Guidelines.
+    -->
+
+    <!-- Margin & Padding, 8 dp baseline, https://material.io/design/layout/understanding-layout.html -->
+    <dimen name="space_size_8">8dp</dimen>
+    <dimen name="space_size_16">16dp</dimen>
+    <dimen name="space_size_24">24dp</dimen>
+    <dimen name="space_size_32">32dp</dimen>
+    <dimen name="space_size_40">40dp</dimen>
+
+    <!-- Font sizes, https://material.io/design/typography/the-type-system.html#type-scale -->
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_34">34sp</dimen>
+    <dimen name="text_size_45">45sp</dimen>
+    <dimen name="text_size_56">56sp</dimen>
+</resources>
