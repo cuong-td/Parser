@@ -8,6 +8,8 @@ import com.example.messageparser.domain.usecase.GetMentionUseCase;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 import io.reactivex.rxjava3.observers.TestObserver;
 
@@ -18,33 +20,30 @@ import io.reactivex.rxjava3.observers.TestObserver;
  */
 public class GetMentionUnitTest {
     private GetMentionUseCase getMention = new GetMentionUseCase();
-    private TestObserver<String> observer = new TestObserver<>();
 
     @Test
-    public void getMention_happyCaseWithUnderscore() {
-        getMention.execute("@billgates do you know where is @elon_musk?")
-                .subscribe(observer);
-        observer.assertComplete();
-        observer.assertNoErrors();
+    public void getMention_None() {
+        List<String> mentions = getMention.execute("This is a sample with no mention");
         assertEquals(
-                Arrays.asList("billgates", "elon_musk"),
-                observer.values()
+                Collections.emptyList(),
+                mentions
         );
     }
 
     @Test
-    public void getMention_adjacentAndHyphen() {
-        getMention.execute("@billgates@clintons do you know where is @elon-musk?")
-                .subscribe(observer);
-        observer.assertComplete();
-        observer.assertNoErrors();
+    public void getMention_One() {
+        List<String> mentions = getMention.execute("Hi @billgates, how are you?");
         assertEquals(
-                Arrays.asList("billgates", "clintons", "elon-musk"),
-                observer.values()
+                Arrays.asList("billgates"),
+                mentions
         );
-//        assertEquals(
-//                Arrays.asList("billgates", "elonmusk"),
-//                getMention.execute("@billgates do you know where is @elonmusk@?")
-//        );
+    }
+
+    @Test
+    public void getMention_Multiple() {
+        assertEquals(
+                Arrays.asList("billgates", "steve", "elonmusk"),
+                getMention.execute("@billgates@steve do you know where is @elonmusk?")
+        );
     }
 }
