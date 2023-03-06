@@ -47,6 +47,7 @@ public class AnalyzeCommentUnitTest {
         String url2 = "https://www.youtube.com";
         String title2 = "YouTube";
         String commentText = mention1 + " and " + mention2 + ", please check these awesome websites: " + url1 + ", " + url2;
+        System.out.println(commentText);
         CommentInfo commentInfo = analyzeComment.execute(commentText);
         assertEquals(
                 Arrays.asList(mention1.substring(1), mention2.substring(1)),

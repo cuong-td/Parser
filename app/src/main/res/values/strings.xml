@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Message Parser</string>
+    <string name="analyze">Analyze</string>
+    <string name="input">Input</string>
 </resources>

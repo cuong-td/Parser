@@ -7,6 +7,7 @@
     -->
 
     <!-- Margin & Padding, 8 dp baseline, https://material.io/design/layout/understanding-layout.html -->
+    <dimen name="space_size_4">4dp</dimen>
     <dimen name="space_size_8">8dp</dimen>
     <dimen name="space_size_16">16dp</dimen>
     <dimen name="space_size_24">24dp</dimen>
