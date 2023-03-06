@@ -12,10 +12,9 @@ import dagger.hilt.components.SingletonComponent;
 
 @Module
 @InstallIn(SingletonComponent.class)
-public final class AppModule {
+public final class NetworkModule {
     @Provides
     @Singleton
-    // This should be separate to NetworkModule in scaling up the project
     RemoteSource provideRemoteSource() {
         return new RemoteSrcImpl();
     }
