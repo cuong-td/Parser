@@ -5,7 +5,11 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.messageparser.R;
+import com.example.messageparser.databinding.ActivityCommentBinding;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class CommentActivity extends AppCompatActivity {
 
     @Override
