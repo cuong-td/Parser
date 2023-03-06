@@ -1,6 +1,9 @@
 package com.example.messageparser;
 
-import android.app.Application;
+import androidx.multidex.MultiDexApplication;
 
-public class App extends Application {
+import dagger.hilt.android.HiltAndroidApp;
+
+@HiltAndroidApp
+public class App extends MultiDexApplication {
 }

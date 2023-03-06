@@ -1,4 +1,4 @@
-package com.example.messageparser.features.comment;
+package com.example.messageparser.feature.comment;
 
 import android.os.Bundle;
 
