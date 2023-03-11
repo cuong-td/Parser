@@ -20,7 +20,6 @@ public class CommentViewModel extends ViewModel {
     private AnalyzeCommentUseCase analyzeComment;
     private Disposable disposable;
 
-    public LiveData<CommentInfo> commentInfo = new MutableLiveData<>();
     public LiveData<String> commentResult = new MutableLiveData<>();
 
 
